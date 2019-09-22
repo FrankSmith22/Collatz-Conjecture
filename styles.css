@@ -55,9 +55,8 @@ div, span{
 	transition-duration: .3s;
 	transition-property: all;
 	transition-timing-function: linear;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
+	cursor: pointer;
+	margin-bottom: 10px;
 }
 
 .stepItem:hover, .stepItem:active{
@@ -77,18 +76,34 @@ div, span{
 .formulaSpan{
 	z-index: 1;
 	opacity: 0;
-	width: 50%;
-	text-align: right;
+	/*border: 1px solid red;*/
 	float: right;
+	margin-right: 3%;
 }
 
 @media only screen and (max-width: 568px) {
   /* For mobile phones: */
-  #main{
-  	width: 90vw;
-  }
+	#main{
+		width: 90vw;
+	}
   
-  #numberField {
-  	width: 90%;
-  }
+	#numberField{
+		width: 90%;
+	}
+	
+	#stepList{
+		font-size: 1.5rem;
+	}
+	
+	.stepItem{
+		margin-bottom: 20px;
+	}
+  
+	.stepItem:hover, .stepItem:active{
+		z-index: 2;
+		font-size: 2rem;
+		height: 15%;
+		border: 1px solid black;
+		border-radius: 2px;
+	}
 }

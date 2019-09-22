@@ -12,7 +12,7 @@
 	<body>
 		<div id="main">
 			<span id="title">Collatz Conjecture</span>
-			<input id="numberField" type="number" min="0" maxlength="10" placeholder="positive integer">
+			<input id="numberField" type="number" min="0" max="9999999999" placeholder="positive integer">
 			<div id="stepList">
 				
 			</div>
