@@ -88,12 +88,14 @@ c.focusStep = function(e){
 }
 
 c.unfocusStep = function(e){
-	if(e.target.className === "stepItem"){
+	if(e.target.className === 'stepItem'){
 		e.target.childNodes[1].style.opacity = 0;
 		e.target.childNodes[1].style.display = 'none';
 		
 		if(m.showingFormula){
 			e.target.childNodes[0].innerHTML = m.currentStepDisplay;
+			e.target.childNodes[0].style.color = 'black';
+			e.target.childNodes[0].style.fontWeight = '100';
 			m.showingFormula = false;
 		}
 	}
@@ -103,6 +105,8 @@ c.unfocusStep = function(e){
 		
 		if(m.showingFormula){
 			e.target.parentNode.childNodes[0].innerHTML = m.currentStepDisplay;
+			e.target.parentNode.childNodes[0].style.color = 'black';
+			e.target.parentNode.childNodes[0].style.fontWeight = '100';
 			m.showingFormula = false;
 		}
 	}
@@ -112,6 +116,8 @@ c.unfocusStep = function(e){
 		
 		if(m.showingFormula){
 			e.target.parentNode.childNodes[0].innerHTML = m.currentStepDisplay;
+			e.target.parentNode.childNodes[0].style.color = 'black';
+			e.target.parentNode.childNodes[0].style.fontWeight = '100';
 			m.showingFormula = false;
 		}
 	}
@@ -122,7 +128,10 @@ c.showStepFormula = function(i){
 	//basically preventing m.currentStepDisplay from being set to the formula 
 	//due to clicking after formula already showing...
 	m.showingFormula = true;
-	let currentStepItem = Array.from(v.stepItem)[i];
-	m.currentStepDisplay = currentStepItem.childNodes[0].innerHTML;
-	currentStepItem.childNodes[0].innerHTML = currentStepItem.dataset.formula
+	let currentStepItem = Array.from(v.stepItem)[i]
+	let currentStepSpan = currentStepItem.childNodes[0];
+	m.currentStepDisplay = currentStepSpan.innerHTML;
+	currentStepSpan.innerHTML = currentStepItem.dataset.formula;
+	currentStepSpan.style.color = "#8BC34A";
+	currentStepSpan.style.fontWeight = '800';
 }

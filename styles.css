@@ -63,7 +63,6 @@ div, span{
 	z-index: 2;
 	font-size: 3.5rem;
 	height: 15%;
-	border: 1px solid black;
 	border-radius: 2px;
 }
 
@@ -76,7 +75,6 @@ div, span{
 .formulaSpan{
 	z-index: 1;
 	opacity: 0;
-	/*border: 1px solid red;*/
 	float: right;
 	margin-right: 3%;
 }
@@ -100,10 +98,6 @@ div, span{
 	}
   
 	.stepItem:hover, .stepItem:active{
-		z-index: 2;
 		font-size: 2rem;
-		height: 15%;
-		border: 1px solid black;
-		border-radius: 2px;
 	}
 }
